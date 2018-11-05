@@ -5,79 +5,56 @@
 	</div>
 </div>
 
+
+
+
 <div class="container">
-	<div class="input-group mb-3">
-		<input type="text" class="form-control" name="name" placeholder="Order your burger here...">
-		<div class="input-group-append">
-			<button class="btn btn-outline-secondary" type="button" id="button-addon2">Submit Order</button>
-		</div>
-	</div>
 
 	<div class="row">
+		<div class="input-group mb-3">
+			<form class="create-form">
+				<div class="form-group">
 
-		<div class="col-md-1">
+					<div class="input-group-append">
+						<input type="text" id="ca" name="burger_name" placeholder="Order your burger here..."> <br>
+						<button type="submit">Add Burger</button>
+					</div>
 
+
+					<div class="input-group-append">
+						<input type="radio" name="devoured" value="1" checked> Hungry!
+						<br>
+						<input type="radio" name="devoured" value="0"> Devoured!
+					</div>
+
+				</div>
+			</form>
 		</div>
 
+		<div class="col-md-1"></div>
+
 		<div class="col-md-5">
-			<h2>Your Order</h2>
 			<div class="order">
-
+				<h2>Your Order!</h2>
 				<ul>
-					{{#each burgers}} {{#unless order}} {{> burgers/cat-block order=true}} {{/unless}} {{/each}}
+					{{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devoured=true}} {{/unless}} {{/each}}
 				</ul>
-
 			</div>
 		</div>
+
 
 		<div class="col-md-5">
-			<h2>Eaten</h2>
 			<div class="eaten">
+				<h2>What you have eaten!</h2>
 				<ul>
-
-					{{#each burgers}} {{#if eaten}} {{> burgers/cat-block order=false}} {{/if}} {{/each}}
-
+					{{#each burgers}} {{#if devoured}} {{> burgers/burger-block devoured=false}} {{/if}} {{/each}}
 				</ul>
 			</div>
 		</div>
 
-		<div class="col-md-1">
-
-		</div>
-
+		<div class="col-md-1"></div>
 	</div>
+
 </div>
 
-<style>
-	body {
-	background-color: orange;
-}
-
-.jumbotron {
-	background-color: red;
-}
-
-.input-group {
-	width: 80%;
-	margin-left: 10%;
-	box-shadow: 2px 2px black;
-}
-
-.order {
-	width: 100%;
-	height: 500px;
-	border: 2px solid black;
-	box-shadow: 2px 2px black;
-}
-
-.eaten {
-	width: 100%;
-	height: 500px;
-	border: 2px solid black;
-	box-shadow: 2px 2px black;
-}
-</style>
-
 <br><br>
-
-
