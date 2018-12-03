@@ -13,5 +13,5 @@
 * Eat it or toss it
 
 
-# Images of the Time-Train application
+# Images of the application
 ![Alt text](/images/eatdaburger.png)
