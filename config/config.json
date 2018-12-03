@@ -16,6 +16,9 @@
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
-    "dialect": "mysql"
+		"dialect": "mysql",
+		"username": "okcta7pekv6hh71r",
+    "password": "nqblo4j3duafggk0",
+    "database": "sm88yk8kslgykj76"
   }
 }
